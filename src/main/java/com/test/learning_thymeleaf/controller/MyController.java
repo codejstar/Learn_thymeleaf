@@ -1,6 +1,7 @@
 package com.test.learning_thymeleaf.controller;
 
 import java.util.Date;
+import java.util.List;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -21,7 +22,14 @@ public class MyController {
 
     // Handling Iteration
     @GetMapping("/example-loop")
-    public String iterateHandler() {
+    public String iterateHandler(Model m) {
+
+        // create a list
+        List<String> names = List.of("Ankit", "Raman", "Hardik", "Ravi");
+
+        // sent list
+        m.addAttribute("names", names);
+
         return "iterate";
     }
 }

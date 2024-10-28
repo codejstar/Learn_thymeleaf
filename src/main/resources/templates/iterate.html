@@ -7,5 +7,13 @@
 </head>
 <body>
     <h1>Going to  traverse element in Collection....</h1>
+    <!-- receive list -->
+     <h1 th:text="${names}"></h1>
+
+     <ul>
+        <li th:each="n,status : ${names}">
+            <span th:style="${status.odd}?'font-weight:bold;color:red' : ' '" th:text="${status.index+1}+' '+${n}"></span>
+        </li>
+     </ul>
 </body>
 </html>

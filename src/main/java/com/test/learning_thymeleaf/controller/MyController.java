@@ -4,6 +4,7 @@ import java.util.Date;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -16,5 +17,11 @@ public class MyController {
         model.addAttribute("name", "Jagdeep Jakhu");
         model.addAttribute("Date", new Date().toString());
         return "about";
+    }
+
+    // Handling Iteration
+    @GetMapping("/example-loop")
+    public String iterateHandler() {
+        return "iterate";
     }
 }

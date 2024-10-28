@@ -32,4 +32,10 @@ public class MyController {
 
         return "iterate";
     }
+
+    // handler for conditional statements
+    @GetMapping("/condition")
+    public String conditionHandler(Model m) {
+        return "condition";
+    }
 }

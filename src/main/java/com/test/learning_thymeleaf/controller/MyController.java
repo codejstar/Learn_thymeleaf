@@ -36,6 +36,7 @@ public class MyController {
     // handler for conditional statements
     @GetMapping("/condition")
     public String conditionHandler(Model m) {
+        m.addAttribute("isActive", true);
         return "condition";
     }
 }

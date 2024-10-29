@@ -37,6 +37,10 @@ public class MyController {
     @GetMapping("/condition")
     public String conditionHandler(Model m) {
         m.addAttribute("isActive", true);
+        m.addAttribute("gender", "M");
+
+        List<Integer> list = List.of(1, 2, 3, 4);
+        m.addAttribute("mylist", list);
         return "condition";
     }
 }

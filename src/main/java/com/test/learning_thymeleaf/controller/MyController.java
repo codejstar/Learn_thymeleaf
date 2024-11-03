@@ -43,4 +43,11 @@ public class MyController {
         m.addAttribute("mylist", list);
         return "condition";
     }
+
+    // handler for including fragment
+    @GetMapping("/service")
+    public String serviceHandler(Model m) {
+
+        return "service";
+    }
 }

@@ -18,5 +18,9 @@
         <p>value of b is  <span th:text="${b}"></span></p>
         <p>value of n is  <span th:text="${n}"></span></p>
     </div>
+
+    <footer th:replace="./footer.html">1</footer>
+    <footer th:include="./footer.html">2</footer>
+    <footer th:insert="./footer.html">3</footer>
 </body>
 </html>

@@ -1,5 +1,6 @@
 package com.test.learning_thymeleaf.controller;
 
+import java.time.LocalDate;
 import java.util.Date;
 import java.util.List;
 
@@ -47,6 +48,8 @@ public class MyController {
     // handler for including fragment
     @GetMapping("/service")
     public String serviceHandler(Model m) {
+        m.addAttribute("title", "i like title");
+        m.addAttribute("subtitle", LocalDate.now().toString());
 
         return "service";
     }

@@ -10,8 +10,11 @@
          th:insert
          th:include 
     --> 
-    <footer id="fragmentTag" th:fragment="footer1">
+         <!-- inheriting Thymeleaf Template -->
+    <footer id="fragmentTag" th:fragment="footer1(title,subtitle)">
                 <div class="container">
+                    <h1 th:text="${title}"></h1>
+                    <h2 th:text="${subtitle}"></h2>
                 Copyright © VFS Global. All Rights Reserved.
             </div>
     </footer>

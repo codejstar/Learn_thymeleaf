@@ -9,8 +9,9 @@
 <body>
         <h1>This services are provided.</h1>
         <!-- going to include footer -->
-        <footer id="hosttag" th:insert="./footer::footer1"></footer>
-        <footer th:include="./footer::footer1"></footer>
-        <footer th:replace="./footer.html"></footer>
+        <!-- <footer id="hosttag" th:insert="./footer::footer1"></footer>
+        <footer th:include="./footer::footer1"></footer> -->
+        <!-- <footer th:replace="./footer::footer1('This is title', 'This is sub')"></footer> -->
+        <footer th:replace="./footer::footer1(${title},${subtitle})"></footer>
 </body>
 </html>
